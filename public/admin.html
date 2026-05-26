@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>💕 Dashboard — Est-ce que tu m'aimes ?</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="hearts-bg" id="hearts-bg" aria-hidden="true"></div>
+
+    <main class="page admin-page">
+      <div class="card">
+        <div class="emoji-top">🔐</div>
+        <h1>Ton espace secret</h1>
+        <p class="subtitle">Tu vois tout en direct : oui, date, lieu, menu…</p>
+
+        <form class="setup-form" id="setup-form">
+          <label for="prenom-input">Son prénom (affiché sur la page)</label>
+          <input
+            type="text"
+            id="prenom-input"
+            placeholder="Ex : Marie"
+            maxlength="40"
+            autocomplete="off"
+          />
+          <button type="submit" class="btn btn-yes">Enregistrer le prénom</button>
+        </form>
+
+        <div class="link-row">
+          <p>Lien à lui envoyer :</p>
+          <code id="share-link"></code>
+        </div>
+
+        <div class="status-box status-waiting" id="status-waiting">
+          <span class="dot"></span>
+          En attente de sa réponse…
+        </div>
+
+        <div class="status-box status-yes" id="status-yes">
+          <h2 id="status-yes-title">🎉 ELLE A DIT OUI !</h2>
+          <p id="yes-message"></p>
+          <p class="status-sub" id="status-sub">En attente qu'elle choisisse date, lieu et menu…</p>
+        </div>
+
+        <div class="status-box status-rdv" id="status-rdv">
+          <h2>📅 Rendez-vous confirmé</h2>
+          <dl class="rdv-details" id="rdv-details"></dl>
+        </div>
+
+        <button type="button" class="btn-secondary" id="btn-reset" style="margin-top: 1rem">
+          Réinitialiser (pour retester)
+        </button>
+      </div>
+    </main>
+
+    <script src="/js/admin.js"></script>
+  </body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>💕 Une question pour toi</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="hearts-bg" id="hearts-bg" aria-hidden="true"></div>
+
+    <main class="page">
+      <div class="card" id="main-card">
+        <section class="question-screen" id="question-screen">
+          <div class="emoji-top">💌</div>
+          <h1>
+            Est-ce que tu m'aimes,
+            <span class="prenom" id="prenom-display">…</span>
+            ?
+          </h1>
+          <p class="subtitle">Réponds honnêtement… enfin, essaye 😊</p>
+
+          <div class="buttons-zone" id="buttons-zone">
+            <div class="buttons-row" id="buttons-row">
+              <button type="button" class="btn btn-yes" id="btn-yes">Oui 💕</button>
+              <button type="button" class="btn btn-no" id="btn-no" aria-label="Non">Non</button>
+            </div>
+          </div>
+
+          <p class="hint" id="hint"></p>
+        </section>
+
+        <section class="rdv-screen" id="rdv-screen">
+          <div class="emoji-top">📅</div>
+          <h2>Organisons notre rendez-vous</h2>
+          <p class="subtitle">Date, heure, lieu… et le menu ? 😋</p>
+
+          <form class="rdv-form" id="rdv-form">
+            <div class="form-row">
+              <label for="rdv-date">Date</label>
+              <input type="date" id="rdv-date" required />
+            </div>
+            <div class="form-row">
+              <label for="rdv-heure">Heure</label>
+              <input type="time" id="rdv-heure" value="18:20" required />
+            </div>
+            <div class="form-row">
+              <label for="rdv-lieu">Lieu</label>
+              <input
+                type="text"
+                id="rdv-lieu"
+                placeholder="Ex : La pizzeria du coin, 12 rue des Lilas"
+                maxlength="120"
+                required
+              />
+            </div>
+
+            <p class="menu-label">Qu'est-ce qui te ferait plaisir ? 😋</p>
+            <p class="menu-sublabel">Pas un resto précis — juste ce que tu as envie de manger</p>
+            <div class="menu-grid" id="menu-grid">
+              <button type="button" class="menu-card" data-id="pizza">
+                <span class="menu-emoji">🍕</span><span>Pizza</span>
+              </button>
+              <button type="button" class="menu-card" data-id="asiatique">
+                <span class="menu-emoji">🍜</span><span>Asiatique</span>
+                <span class="menu-hint">sushi, ramen…</span>
+              </button>
+              <button type="button" class="menu-card" data-id="italien">
+                <span class="menu-emoji">🍝</span><span>Italien</span>
+                <span class="menu-hint">pâtes, risotto…</span>
+              </button>
+              <button type="button" class="menu-card" data-id="burger">
+                <span class="menu-emoji">🍔</span><span>Burger & frites</span>
+              </button>
+              <button type="button" class="menu-card" data-id="leger">
+                <span class="menu-emoji">🥗</span><span>Plat léger / salade</span>
+              </button>
+              <button type="button" class="menu-card" data-id="sucre">
+                <span class="menu-emoji">🧁</span><span>Envie de sucré</span>
+                <span class="menu-hint">crêpes, gaufres…</span>
+              </button>
+            </div>
+
+            <button type="submit" class="btn btn-yes btn-full" id="btn-rdv-submit" disabled>
+              Confirmer le rendez-vous 💕
+            </button>
+          </form>
+        </section>
+
+        <section class="success-screen" id="success-screen">
+          <div class="big-heart">💖</div>
+          <h2>Rendez-vous confirmé !</h2>
+          <div class="rdv-recap" id="rdv-recap"></div>
+          <p class="success-note">On a hâte. À très bientôt 💕</p>
+        </section>
+      </div>
+    </main>
+
+    <script src="/js/menus.js"></script>
+    <script src="/js/question.js"></script>
+  </body>
+</html>
